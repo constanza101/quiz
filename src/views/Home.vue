@@ -36,6 +36,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import axios from "axios";
 
 export default {
   name: "Home",
@@ -45,21 +46,8 @@ export default {
   data: () => {
     return {
       // quizes: Array,
-      selectedQuiz: Number,
-      quizes: [
-        {
-          id: 141,
-          title: "Video Games",
-        },
-        {
-          id: 169,
-          title: "Numbers",
-        },
-        {
-          id: 322,
-          title: "Movies",
-        },
-      ],
+      selectedQuiz: null,
+      quizes: [], 
     };
   },
   created() {
@@ -71,7 +59,7 @@ export default {
     async getQuizes() {
       try {
         let response = await axios.get(
-          `/https://printful.com/test-quiz.php?action=quizzes`
+          `https://printful.com/test-quiz.php?action=quizzes`
         );
         let result = response.data;
         console.log(result)
