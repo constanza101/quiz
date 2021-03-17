@@ -60,7 +60,6 @@ export default {
   },
   data: () => {
     return {
-      // quizes: Array,
       selectedQuiz: null,
       quizes: [],
       valid: false,
@@ -70,19 +69,18 @@ export default {
       },
     };
   },
-  created() {
-    this.getQuizes();
+  async mounted() {
+    await this.getQuizes();
   },
   methods: {
     submit(){
       if (this.$refs.form.validate()) {
         console.log("OK")
-      } else {
-                console.log("NOT OK")
-
+        this.$router.push({
+        name: "Quiz",
+        params: { id: this.selectedQuiz },
+      });
       }
-
-
     },
     //Axios:
     async getQuizes() {
