@@ -18,6 +18,7 @@
       <v-row class="d-flex justify-center">
         <v-col class="d-flex justify-center" cols="10" md="4">
           <v-text-field
+            v-model="userName"
             label="Please enter your name here."
             placeholder="Eg. Constanza"
             filled
@@ -60,6 +61,7 @@ export default {
   },
   data: () => {
     return {
+      userName: "",
       selectedQuiz: null,
       quizes: [],
       valid: false,
@@ -73,13 +75,14 @@ export default {
     await this.getQuizes();
   },
   methods: {
-    submit(){
+    submit() {
       if (this.$refs.form.validate()) {
-        console.log("OK")
+        localStorage.setItem("userName", this.userName);
+        console.log("OK");
         this.$router.push({
-        name: "Quiz",
-        params: { id: this.selectedQuiz },
-      });
+          name: "Quiz",
+          params: { id: this.selectedQuiz },
+        });
       }
     },
     //Axios:

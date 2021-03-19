@@ -3,12 +3,14 @@
     <v-app-bar app color="#000" dark>
       <div class="d-flex align-center">
         <v-img
+          @click="home"
           alt="Vuetify Logo"
           class="shrink mr-5"
           contain
           :src="require('./assets/printful-logo.png')"
           transition="scale-transition"
           width="40"
+          style="cursor: pointer"
         />
       </div>
 
@@ -43,5 +45,12 @@ export default {
   data: () => ({
     //
   }),
+  methods: {
+    home() {
+      this.$router.push({
+        name: "Home",
+      });
+    },
+  },
 };
 </script>
