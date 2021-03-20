@@ -250,12 +250,9 @@ export default {
       let totalQuestions = this.questionsArr.length;
       let currentQuestion = this.answerIndex;
       let progress = null;
-      console.log(currentQuestion);
-      console.log(totalQuestions);
       currentQuestion < totalQuestions
         ? (progress = Math.ceil((currentQuestion / totalQuestions) * 100))
         : (progress = 100);
-      console.log(progress);
 
       return progress;
     },
@@ -282,7 +279,6 @@ export default {
   },
   methods: {
     async chooseAnswer(answerId) {
-      console.log(answerId);
       this.userAnswers[this.tab] = answerId;
       let isLastQuestion = this.tab + 1 == this.questionsArr.length;
       if (!isLastQuestion) {
@@ -293,8 +289,6 @@ export default {
       } else {
         this.tab++;
         this.answerIndex++;
-        console.log("isLastQuestion");
-        console.log(this.userAnswers);
         this.submitAnswers();
       }
     },

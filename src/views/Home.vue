@@ -32,6 +32,8 @@
           <v-select
             v-model="selectedQuiz"
             :items="quizes"
+            :loading="loadingQuizes"
+            :disabled="quizes.length === 0"
             item-text="title"
             item-value="id"
             filled
@@ -69,6 +71,7 @@ export default {
         idRequired: (value) => !isNaN(parseFloat(value)) || "Requerido",
         textRequired: (value) => !!value || "Requerido",
       },
+      loadingQuizes:true,
     };
   },
   async mounted() {
@@ -78,7 +81,6 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         localStorage.setItem("userName", this.userName);
-        console.log("OK");
         this.$router.push({
           name: "Quiz",
           params: { id: this.selectedQuiz },
@@ -92,8 +94,8 @@ export default {
           `https://printful.com/test-quiz.php?action=quizzes`
         );
         let result = response.data;
-        console.log(result);
         this.quizes = result;
+        this.loadingQuizes = false;
       } catch (err) {
         console.log(err);
       }
