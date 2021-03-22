@@ -2,7 +2,7 @@
 ---
 ## Preview on Github Pages: 
 https://constanza101.github.io/quiz/
-**NOTE: You will need to click on the printful logo on the top left side corner to go to the home page**
+###**NOTE: You will need to click on the printful logo on the top left side corner to go to the home page**
     
     
 ## Install
