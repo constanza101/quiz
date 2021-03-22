@@ -50,5 +50,8 @@ This front-end project is developed in VUE.js, using Vuetify for styling and res
         
  **4.BONUS: For extra information, as I have not had the chance to reuse components in this project, I have attached a link to a previous project where I make use of reusable components and a geolocalization library to make a mars rover game. Thank you for reading  :)**
      
+     - Use the app:  https://constanza101.github.io/vue-leaflet-mars-rover/
+     - Watch the code: https://github.com/constanza101/vue-leaflet-mars-rover
+   
 
 
