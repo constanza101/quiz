@@ -1,6 +1,8 @@
 # Quizful - quiz app.
 ---
-
+## Preview on Github Pages:  **NOTE: yoy will need to click on the printful logo on the TOP left side corner to go to the home page**
+    https://constanza101.github.io/quiz/169
+    
 ## Install
 
     $ git clone https://github.com/constanza101/quiz.git
