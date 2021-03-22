@@ -47,7 +47,7 @@ This front-end project is developed in VUE.js, using Vuetify for styling and res
         - The results are fetched by concatenating the quiz id and all the answers id, and sending it as a GET request to the given point end using axios.
         
         
- **4.BONUS: For extra information, as I have not had the chance to reuse components in this project, I have attached a link to a previous project where I make use of reusable components and a geolocalization library to make a mars rover game. Thank you for reading  :)
+ **4.BONUS: For extra information, as I have not had the chance to reuse components in this project, I have attached a link to a previous project where I make use of reusable components and a geolocalization library to make a mars rover game. Thank you for reading  :)**
      
 
 
