@@ -203,7 +203,7 @@
                         dark
                         x-large
                         color="#ee4642"
-                        to="https://constanza101.github.io/vue-leaflet-mars-rover/"
+                        href="https://constanza101.github.io/vue-leaflet-mars-rover/" target="_blank" 
                       >
                         take me to mars!
                       </v-btn>
