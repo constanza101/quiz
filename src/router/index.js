@@ -6,6 +6,7 @@ import Quiz from '../views/Quiz.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  
   {
     path: '/',
     name: 'Home',
@@ -19,6 +20,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  base: "/quiz/",
   routes,
   mode: 'history'
 })
