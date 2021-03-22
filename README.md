@@ -45,6 +45,7 @@ This front-end project is developed in VUE.js, using Vuetify for styling and res
     
         NOTE: to make the excercise more interesting, I have not used the VUE router again to navigate to another route/view, instead I thought it could be better  to use a fullscreen dialog component, which appears with a bottom to top transition.
         - The results are fetched by concatenating the quiz id and all the answers id, and sending it as a GET request to the given point end using axios.
+        - If the results are more than 70% positive, you will read a "Congratulations" message, if the correct answers are less than that, you will read a "try again" message.
         
         
  **4.BONUS: For extra information, as I have not had the chance to reuse components in this project, I have attached a link to a previous project where I make use of reusable components and a geolocalization library to make a mars rover game. Thank you for reading  :)**
